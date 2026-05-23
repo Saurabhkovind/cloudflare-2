@@ -1,0 +1,28 @@
+name             = "nexiit-workers"
+main             = "worker.js"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+# ─── D1 DATABASE ──────────────────────────────────────────
+[[d1_databases]]
+binding     = "DB"
+database_name = "nexiit_db"
+database_id = "a12626f2-1d3b-4398-9fab-99a3500b63b9"
+
+# ─── ENVIRONMENT VARIABLES ────────────────────────────────
+# Set these in Cloudflare Dashboard → Workers → nexiit-workers → Settings → Variables
+# NEVER put real values here — this file goes in git
+#
+# Required secrets (set via Dashboard or wrangler secret put):
+#   BOT_TOKEN          — Telegram bot token (@BotFather)
+#   FAST2SMS_KEY       — Fast2SMS API key
+#   BREVO_KEY          — Brevo (Sendinblue) API key
+#   ADMIN_KEY          — Your custom admin key (random 32+ chars)
+#   ARAVALLI_CHAT_ID   — Telegram chat ID for Aravalli room
+#   STORAGE_CHANNEL_ID — Telegram channel ID for file storage
+
+# ─── ROUTES ───────────────────────────────────────────────
+# Uncomment and set your custom domain when ready:
+# [[routes]]
+# pattern = "api.nexiit.in/*"
+# zone_name = "nexiit.in"
