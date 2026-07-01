@@ -15,6 +15,7 @@
 const ALLOWED_ORIGINS = [
   "https://nexiit.netlify.app",
   "https://nexiit.pages.dev",
+  "https://nexiitt.saurabhkumarsaurabhkumar29286.workers.dev",
 ];
 // Add your custom domain here when you have one
 
